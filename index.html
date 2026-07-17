@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <section class="hero-panel">
+            <div>
+                <p class="eyebrow">Neon Arena</p>
+                <h1>Tic Tac Toe</h1>
+            </div>
+            <div class="score-strip" aria-label="Scoreboard">
+                <article>
+                    <span>X Wins</span>
+                    <strong id="x-wins">0</strong>
+                </article>
+                <article>
+                    <span>Draws</span>
+                    <strong id="draws">0</strong>
+                </article>
+                <article>
+                    <span>O Wins</span>
+                    <strong id="o-wins">0</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="arena">
+            <aside class="side-panel">
+                <div class="turn-container" aria-label="Current turn">
+                    <h2>Turn For</h2>
+                    <div class="turn-track">
+                        <span class="turn-box active" data-player="X">X</span>
+                        <span class="turn-box" data-player="O">O</span>
+                        <span class="turn-glow"></span>
+                    </div>
+                </div>
+
+                <div class="stat-grid">
+                    <article>
+                        <span>Total Matches</span>
+                        <strong id="total-matches">0</strong>
+                    </article>
+                    <article>
+                        <span>Max Wins</span>
+                        <strong id="max-wins">0</strong>
+                    </article>
+                    <article>
+                        <span>Max Losses</span>
+                        <strong id="max-losses">0</strong>
+                    </article>
+                    <article>
+                        <span>Best Streak</span>
+                        <strong id="best-streak">0</strong>
+                    </article>
+                </div>
+            </aside>
+
+            <section class="board-panel" aria-label="Game board">
+                <div class="main-grid">
+                    <button class="box" type="button" aria-label="Cell 1"></button>
+                    <button class="box" type="button" aria-label="Cell 2"></button>
+                    <button class="box" type="button" aria-label="Cell 3"></button>
+                    <button class="box" type="button" aria-label="Cell 4"></button>
+                    <button class="box" type="button" aria-label="Cell 5"></button>
+                    <button class="box" type="button" aria-label="Cell 6"></button>
+                    <button class="box" type="button" aria-label="Cell 7"></button>
+                    <button class="box" type="button" aria-label="Cell 8"></button>
+                    <button class="box" type="button" aria-label="Cell 9"></button>
+                </div>
+                <h2 id="results" aria-live="polite">X starts the match</h2>
+                <div class="controls">
+                    <button id="undo-move" type="button">Undo</button>
+                    <button id="play-again" type="button">New Match</button>
+                    <button id="reset-stats" type="button">Reset Stats</button>
+                </div>
+            </section>
+
+            <aside class="history-panel">
+                <div class="panel-heading">
+                    <h2>Match History</h2>
+                    <span id="history-count">0</span>
+                </div>
+                <ol id="match-history" class="match-history"></ol>
+            </aside>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
